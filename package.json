@@ -1,0 +1,12 @@
+{
+  "name": "voice-expense-manager-workspace",
+  "version": "1.0.0",
+  "description": "Voice-Enabled Smart Expense Manager Root",
+  "scripts": {
+    "start": "npm --prefix backend start",
+    "dev": "npm --prefix backend run dev",
+    "install-backend": "npm --prefix backend install",
+    "seed": "npm --prefix backend run seed"
+  }
+}
+

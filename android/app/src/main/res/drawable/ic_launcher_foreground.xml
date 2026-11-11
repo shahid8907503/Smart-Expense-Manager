@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Emerald circle ring -->
+    <path
+        android:fillColor="#10B981"
+        android:pathData="M54,20 C35.2,20 20,35.2 20,54 C20,72.8 35.2,88 54,88 C72.8,88 88,72.8 88,54 C88,35.2 72.8,20 54,20 Z M54,80 C39.6,80 28,68.4 28,54 C28,39.6 39.6,28 54,28 C68.4,28 80,39.6 80,54 C80,68.4 68.4,80 54,80 Z"/>
+    <!-- Mic icon in center -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,36 C50.7,36 48,38.7 48,42 L48,54 C48,57.3 50.7,60 54,60 C57.3,60 60,57.3 60,54 L60,42 C60,38.7 57.3,36 54,36 Z M65,54 C65,60.1 60,65 54,65 C48,65 43,60.1 43,54 L40,54 C40,61.1 45.3,66.9 52,67.8 L52,72 L56,72 L56,67.8 C62.7,66.9 68,61.1 68,54 L65,54 Z"/>
+</vector>

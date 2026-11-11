@@ -1,0 +1,54 @@
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+release/
+
+# Gradle files
+.gradle/
+build/
+**/build/
+**/.gradle/
+
+# Local configuration file (sdk path, etc)
+local.properties
+**/local.properties
+
+# Android Studio / IntelliJ IDEA
+.idea/
+**/.idea/
+*.iml
+captures/
+.navigation/
+.externalNativeBuild/
+.cxx/
+
+# Node.js / Backend
+node_modules/
+**/node_modules/
+.env
+**/.env
+npm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite
+*.db
+
+# OS specific
+.DS_Store
+Thumbs.db
+

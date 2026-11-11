@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="forest_green_primary">#0B3B24</color>
+    <color name="forest_green_dark">#052415</color>
+    <color name="emerald_accent">#10B981</color>
+    <color name="warm_offwhite_bg">#F8FAF8</color>
+    <color name="charcoal_text">#121816</color>
+    <color name="muted_grey_text">#64748B</color>
+    <color name="card_border">#E2E8F0</color>
+    <color name="expense_red">#DC2626</color>
+    <color name="income_green">#16A34A</color>
+</resources>
+

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Smart Expense</string>
+    <string name="tagline">Voice-Enabled Intelligent Finance Manager</string>
+    <string name="add_expense_voice">Add Expense by Voice</string>
+    <string name="tap_to_speak">Tap the microphone and speak naturally</string>
+    <string name="listening">Listening…</string>
+    <string name="processing">Processing with NLP…</string>
+    <string name="confirm_transaction">Confirm Transaction</string>
+    <string name="edit_details">Edit Details</string>
+    <string name="save_transaction">Save Transaction</string>
+</resources>
+
