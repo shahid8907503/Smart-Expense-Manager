@@ -82,12 +82,27 @@ Voice-Enabled Smart Expense Manager
 │   │   │   │   ├── NlpTransactionParser.kt    # Client-side Multilingual NLP
 │   │   │   │   ├── VoiceQueryEngine.kt        # Spoken question DB calculator
 │   │   │   │   └── KeywordCategorizer.kt      # 9 Category classifier
+│   │   │   ├── java_core/
+│   │   │   │   └── FinancialMathJavaService.java # Pure Java EMI & financial math engine
 │   │   │   └── ui/
 │   │   │       ├── theme/               # Material 3 Color, Type, Shape, Theme
 │   │   │       ├── components/          # Waveform, SummaryCard, Charts, Rows
 │   │   │       ├── screens/             # Splash, Auth, Home, Voice, Budget, Analytics
 │   │   │       └── navigation/          # AppNavGraph, Screen destinations
 │   │   └── res/                         # Strings, colors, network config
+│
+├── java-backend/                        # Java 21 + Spring Boot 3 Full Stack Server
+│   ├── build.gradle.kts                 # Spring Web, Spring Data JPA, H2 SQL, Thymeleaf
+│   ├── run_java_backend.bat             # One-click Spring Boot server launcher
+│   └── src/main/
+│       ├── java/com/smart/expense/
+│       │   ├── SmartExpenseJavaApplication.java
+│       │   ├── model/                   # @Entity JPA models (Transaction, Budget)
+│       │   ├── repository/              # JpaRepository interfaces
+│       │   └── controller/              # @RestController API & Thymeleaf MVC Controller
+│       └── resources/
+│           ├── application.properties   # Server port 5000 & H2 console config
+│           └── templates/dashboard.html # Full Stack Web Portal (Thymeleaf + HTML/CSS)
 │
 └── backend/                             # Node.js + Express REST API
     ├── server.js                        # Express server entry point

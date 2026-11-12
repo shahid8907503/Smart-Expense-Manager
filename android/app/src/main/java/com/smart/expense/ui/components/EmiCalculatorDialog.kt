@@ -21,9 +21,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import com.smart.expense.data.currency.CurrencyManager
+import com.smart.expense.java_core.FinancialMathJavaService
 import com.smart.expense.ui.theme.ForestGreenContainer
 import com.smart.expense.ui.theme.ForestGreenPrimary
-import kotlin.math.pow
 
 @Composable
 fun EmiCalculatorDialog(
@@ -38,24 +38,10 @@ fun EmiCalculatorDialog(
     val annualRate = interestRateText.toDoubleOrNull() ?: 0.0
     val tenureMonths = tenureMonthsText.toIntOrNull() ?: 1
 
-    // EMI formula: P * r * (1 + r)^n / ((1 + r)^n - 1)
-    val monthlyRate = (annualRate / 12.0) / 100.0
-
-    val emi = if (principal > 0 && annualRate > 0 && tenureMonths > 0) {
-        val factor = (1.0 + monthlyRate).pow(tenureMonths.toDouble())
-        if (factor > 1.0) {
-            (principal * monthlyRate * factor) / (factor - 1.0)
-        } else {
-            principal / tenureMonths
-        }
-    } else if (tenureMonths > 0) {
-        principal / tenureMonths
-    } else {
-        0.0
-    }
-
+    // Powered by Pure Java Core Engine (FinancialMathJavaService)
+    val emi = FinancialMathJavaService.calculateMonthlyEmi(principal, annualRate, tenureMonths)
     val totalPayment = emi * tenureMonths
-    val totalInterest = if (totalPayment > principal) totalPayment - principal else 0.0
+    val totalInterest = FinancialMathJavaService.calculateTotalInterest(principal, emi, tenureMonths)
 
     val curr = CurrencyManager.getCurrency(currencyCode)
 

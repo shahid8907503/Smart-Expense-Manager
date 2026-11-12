@@ -42,11 +42,14 @@ node_modules/
 **/.env
 npm-debug.log*
 
-# Python
+# Python & Java H2 Runtime Data
 __pycache__/
 *.py[cod]
 *.sqlite
 *.db
+*.mv.db
+*.trace.db
+java-backend/data/
 
 # OS specific
 .DS_Store
