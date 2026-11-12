@@ -1,6 +1,6 @@
 # Voice-Enabled Smart Expense Manager 🎙️💰
 
-A modern, production-grade Android personal finance management application that empowers users to effortlessly track daily expenses and income using natural speech in **English**, **Telugu**, and **Hindi**, coupled with an intelligent **Node.js/Express/MongoDB** REST backend, **Room Database** offline sync, and **Text-to-Speech** financial queries.
+A modern, production-grade **Java Full Stack** & Android personal finance management application that empowers users to track daily expenses and income using natural speech in **English**, **Tamil**, **Telugu**, and **Hindi**, powered by a unified **Java 21 + Spring Boot 3 + Spring Data JPA + H2 SQL + Thymeleaf Web Portal** backend, **Room Database** offline sync, and **Bank-Grade Security**.
 
 ---
 
@@ -91,62 +91,35 @@ Voice-Enabled Smart Expense Manager
 │   │   │       └── navigation/          # AppNavGraph, Screen destinations
 │   │   └── res/                         # Strings, colors, network config
 │
-├── java-backend/                        # Java 21 + Spring Boot 3 Full Stack Server
-│   ├── build.gradle.kts                 # Spring Web, Spring Data JPA, H2 SQL, Thymeleaf
-│   ├── run_java_backend.bat             # One-click Spring Boot server launcher
-│   └── src/main/
-│       ├── java/com/smart/expense/
-│       │   ├── SmartExpenseJavaApplication.java
-│       │   ├── model/                   # @Entity JPA models (Transaction, Budget)
-│       │   ├── repository/              # JpaRepository interfaces
-│       │   └── controller/              # @RestController API & Thymeleaf MVC Controller
-│       └── resources/
-│           ├── application.properties   # Server port 8080 & H2 console config
-│           └── templates/dashboard.html # Full Stack Web Portal (Thymeleaf + HTML/CSS)
-│
-└── backend/                             # Node.js + Express REST API
-    ├── server.js                        # Express server entry point
-    ├── .env                             # Environment configuration
-    ├── package.json                     # Dependencies (JWT, bcryptjs, mongoose)
-    └── src/
-        ├── config/db.js                 # MongoDB connection with resilient fallback
-        ├── middleware/auth.js           # JWT authentication middleware
-        ├── models/                      # User, Transaction, Budget, Category
-        ├── controllers/                 # Auth, Transactions, Budgets, Analytics, Voice
-        ├── routes/                      # REST endpoints (/api/...)
-        ├── nlp/                         # Multilingual NLP parser, categorizer, query engine
-        └── seed.js                      # Realistic demonstration data seeder
+└── java-backend/                        # Java 21 + Spring Boot 3 Full Stack Server (Official Backend)
+    ├── build.gradle.kts                 # Spring Web, Spring Data JPA, H2 SQL, Thymeleaf
+    ├── run_java_backend.bat             # One-click Spring Boot server launcher
+    └── src/main/
+        ├── java/com/smart/expense/
+        │   ├── SmartExpenseJavaApplication.java
+        │   ├── model/                   # @Entity JPA models (User, Transaction, Budget)
+        │   ├── repository/              # JpaRepository interfaces
+        │   └── controller/              # AuthController, ApiExpenseController, VoiceController, WebDashboardController
+        └── resources/
+            ├── application.properties   # Server port 5000 & H2 console config
+            └── templates/dashboard.html # Full Stack Web Portal (Thymeleaf + HTML/CSS)
 ```
 
 ---
 
 ## 🚀 Execution & Setup Instructions
 
-### 1. Backend Setup (Node.js & MongoDB)
+### 1. Java Spring Boot Full Stack Server (`java-backend/`)
 
-1. Open a terminal in the `backend/` directory:
-   ```bash
-   cd backend
-   npm install
+1. Double-click `java-backend/run_java_backend.bat` OR run via terminal:
+   ```powershell
+   cd java-backend
+   gradle bootRun
    ```
-
-2. Configure `.env` (optional, defaults provided):
-   ```ini
-   PORT=5000
-   MONGODB_URI=mongodb://127.0.0.1:27017/voice_expense_db
-   JWT_SECRET=super_secret_voice_expense_jwt_token_key_2026
-   ```
-
-3. Seed demonstration data (optional):
-   ```bash
-   npm run seed
-   ```
-
-4. Start the server:
-   ```bash
-   npm start
-   ```
-   > **Note:** The backend features an automatic resilient fallback store. If MongoDB is not running locally, the server continues operating in in-memory demo mode so API endpoints and college demonstrations never crash!
+2. Access the **Java Full Stack Web Portal** & **H2 SQL Database Console** in your browser:
+   - **Web Dashboard:** `http://localhost:5000/`
+   - **H2 SQL Console:** `http://localhost:5000/h2-console` (`JDBC URL: jdbc:h2:file:./data/smart_expense_db`, User: `sa`, Password: *(blank)*)
+   - **REST API Health:** `http://localhost:5000/api/health`
 
 ---
 
