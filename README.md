@@ -101,7 +101,7 @@ Voice-Enabled Smart Expense Manager
 │       │   ├── repository/              # JpaRepository interfaces
 │       │   └── controller/              # @RestController API & Thymeleaf MVC Controller
 │       └── resources/
-│           ├── application.properties   # Server port 5000 & H2 console config
+│           ├── application.properties   # Server port 8080 & H2 console config
 │           └── templates/dashboard.html # Full Stack Web Portal (Thymeleaf + HTML/CSS)
 │
 └── backend/                             # Node.js + Express REST API
